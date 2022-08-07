@@ -1,34 +1,13 @@
 import './App.css';
-import { Heading } from './components/Heading';
-import { Oscar } from './components/Oscar';
-import { Status } from './components/Status';
-import { Greet } from './components/Greet';
-// import { Person } from './components/Person';
-// import { PersonList } from './components/PersonList';
-// import { MuiButton } from './components/MuiButton';
-// import { MuiTypography } from './components/MuiTypography';
+import { Button } from './components/Button';
+import { Input } from './components/Input';
 
 function App() {
-  const personName = {
-    first: 'Bruce',
-    last: 'Wayne'
-  }
-  const nameList = [
-    {first: 'Bruce', last:'Wayne'},
-    {first: 'Peter', last:'Parker'},
-    {first: 'Clark', last:'Kent'},
-  ]
+
   return (
     <div className="App">
-      {/* <Greet name='Human' messageCount={10} isLoggedIn={false} />
-      <Person name={personName} />
-      <PersonList names={nameList} /> */}
-      <Status status='error'/>
-      <Heading>Placeholder text</Heading>
-      <Oscar>
-        <Heading>Oscar goes to Leonardo Dicaprio!</Heading>
-      </Oscar>
-      <Greet name='Human' isLoggedIn={false}/>
+      <Button handleClick={(event, id)=>{console.log('Button clicked', event, id)}}/>
+      <Input value='' handleChange={(event)=>console.log(event)}/>
     </div>
   );
 }
